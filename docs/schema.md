@@ -70,9 +70,10 @@ create table notes (
   id uuid primary key default gen_random_uuid(),
   session_id uuid references sessions(id) on delete cascade,
   summary text,
-  key_terms jsonb,        -- [{term: string, definition: string}, ...]
-  main_points jsonb,      -- [{heading: string, content: string}, ...]
-  action_items jsonb,     -- [{item: string, deadline: string | null}, ...]
+  key_terms jsonb,        -- [{term: string, example: string}, ...]
+  main_points jsonb,      -- [{heading: string, explanation: string}, ...]
+  details jsonb,          -- [{fact: string}, ...] dense factual content for flashcards
+  action_items jsonb,     -- [{item: string, type: 'TODO' | 'REC'}, ...]
   created_at timestamptz default now(),
   updated_at timestamptz default now()
 );
