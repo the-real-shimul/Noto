@@ -91,7 +91,7 @@ Acceptance criteria:
 **As a student, I want to view and edit my generated notes so that I can correct errors and add my own context.**
 
 Acceptance criteria:
-- Notes displayed in four sections: Summary, Key Terms, Main Points, Action Items
+- Notes displayed in five sections: Summary, Key Terms, Main Points, Details, Action Items
 - Each section is individually editable inline (contenteditable or textarea)
 - "Save" button appears when any section is edited
 - Saving triggers a Supabase update on the notes table

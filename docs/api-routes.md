@@ -25,7 +25,7 @@ const { data: { session } } = await supabase.auth.getSession()
 if (!session || session.user.email !== process.env.ADMIN_EMAIL) {
   return NextResponse.json({ error: 'Not found' }, { status: 404 })
 }
-const adminClient = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY)
+const adminClient = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY)
 ```
 
 ---
@@ -102,7 +102,7 @@ const adminClient = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_
 **Logic:**
 1. Validate session
 2. Call Groq LLM with note generation prompt (see prompts.md)
-3. Parse structured response into: summary, key_terms, main_points, action_items
+3. Parse structured response into: summary, key_terms, main_points, details, action_items
 4. If no session_id: create new sessions row, set expires_at based on plan (free = now + 24h, premium = null)
 5. If session_id provided: update existing sessions row (regeneration)
 6. Upsert notes row for the session
@@ -114,9 +114,10 @@ const adminClient = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_
   "session_id": "uuid",
   "notes": {
     "summary": "...",
-    "key_terms": [{ "term": "...", "definition": "..." }],
-    "main_points": [{ "heading": "...", "content": "..." }],
-    "action_items": [{ "item": "...", "deadline": null }]
+    "key_terms": [{ "term": "...", "example": "..." }],
+    "main_points": [{ "heading": "...", "explanation": "..." }],
+    "details": [{ "fact": "..." }],
+    "action_items": [{ "item": "...", "type": "TODO" }]
   }
 }
 ```
