@@ -2,7 +2,7 @@
 
 > 2 clicks from lecture to flashcards.
 
-Noto is a web app for APU (Ritsumeikan Asia Pacific University) students to generate structured notes and Anki-ready flashcards from lecture transcripts or audio recordings. Built with AI-assisted development using Claude Code.
+Noto is a web app for APU (Ritsumeikan Asia Pacific University) students to generate structured notes and Anki-ready flashcards from lecture transcripts or audio recordings. Made for a project for Venture Entrepreneurship class. 
 
 ---
 
@@ -13,7 +13,7 @@ Noto is a web app for APU (Ritsumeikan Asia Pacific University) students to gene
 3. **Generate flashcards** automatically from your notes
 4. **Export** notes as PDF, DOCX, or TXT — and flashcards as an Anki `.apkg` deck with ease factors baked in
 
-No setup. No prompt engineering. Just your lecture content and your notes.
+No setup needed. Complete bilingual lecture notes and flashcards from your class recordings/documents.
 
 ---
 
