@@ -253,4 +253,4 @@ Private project. Not open source.
 
 ---
 
-Built by [Shimul Al Imran](https://github.com/the-real-shimul) · APU Class of 2026
+Built by [Shimul Al Imran](https://github.com/the-real-shimul) · APU Class of 2027
