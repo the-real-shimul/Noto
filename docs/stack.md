@@ -41,7 +41,7 @@ Keep it lean, keep it free. Prefer client-side execution over server compute. St
 | ORM | None — use Supabase JS client directly |
 
 - Free tier: 500MB DB, 1GB storage, 50,000 MAU.
-- Audio files deleted from Supabase Storage immediately after transcription.
+- Audio files are never uploaded to Supabase Storage. They are processed via IndexedDB client-side and sent directly to Groq Whisper. Supabase Storage is reserved for future use.
 - Row Level Security (RLS) enabled on all tables. Use auth.uid() in policies.
 - No raw SQL queries in application code — use Supabase JS client.
 

@@ -41,7 +41,7 @@ Do NOT build in this session:
 **Verify:**
 - Google OAuth flow works end to end
 - APU email rejects non @apu.ac.jp addresses
-- Username is saved to profiles.display_name
+- Username is saved to profiles.username
 - Returning users skip username selection
 - Account deletion removes all data and signs user out
 - App is live on Vercel URL
@@ -57,7 +57,7 @@ Tasks:
 - Groq LLM API integration via Next.js API route (server-side, API key never exposed)
 - Note generation prompt (see prompts.md)
 - Loading state: "Generating your notes..."
-- Note viewer page: four sections (Summary, Key Terms, Main Points, Action Items)
+- Note viewer page: five sections (Summary, Key Terms, Main Points, Details, Action Items)
 - Inline editing per section (contenteditable), Save button, Supabase update on save
 - Regenerate Notes button with confirmation modal
 - Session saved to Supabase with source = 'paste'
@@ -199,7 +199,7 @@ Tasks:
   - On completion: transcript stitched, note generation triggered automatically
   - Browser notification: "Your notes for [session title] are ready"
   - In-app notification created in notifications table
-  - Audio deleted from IndexedDB and Supabase Storage after transcription
+  - Audio deleted from IndexedDB after transcription (audio is never uploaded to Supabase Storage)
   - Session saved with source = 'recording'
 
 Do NOT build in this session:

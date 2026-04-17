@@ -1,4 +1,5 @@
 # Noto — Master Review Prompt for Claude Opus
+> **Note:** This is a reusable audit prompt. Paste the full contents of this file into an Opus session to get a fresh independent review of the documentation. It is not an audit report — it is the prompt that generates one.
 
 ## Instructions for Opus
 You are reviewing the complete technical documentation for a web app called **Noto** (ノート). Your job is to act as a senior software engineer doing a pre-build audit. Find every oversight, inconsistency, missing piece, security hole, logical flaw, or incorrect assumption across the documentation below.

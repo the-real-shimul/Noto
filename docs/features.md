@@ -156,7 +156,7 @@ Acceptance criteria:
 - "Generate Flashcards" button visible on note viewer page
 - Clicking triggers Groq LLM API call via Next.js API route using the notes content
 - Loading state shown: "Generating flashcards..."
-- Minimum 5 flashcards generated per session
+- Minimum 5 flashcards generated per session, maximum 30
 - Each flashcard has front (question) and back (answer) fields
 - Flashcards saved to Supabase with default template = 'basic', rating = null
 - On success, user redirected to flashcard review page
@@ -216,7 +216,7 @@ Acceptance criteria:
 - If free user has reached 6 exports today, show: "Daily export limit reached. Upgrade to Premium for unlimited exports."
 - Export count incremented in Supabase after successful download
 - Premium users have no export limit check
-- All exports include all four note sections: Summary, Key Terms, Main Points, Action Items
+- All exports include all five note sections: Summary, Key Terms, Main Points, Details, Action Items
 
 ---
 

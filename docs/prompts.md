@@ -59,7 +59,7 @@ Transcript:
 | main_points | notes.main_points |
 | details | notes.details |
 | action_items | notes.action_items |
-| quote | notes.summary (prepended as first line) |
+| quote | notes.summary (prepended as first line — no separate schema column needed) |
 
 ---
 
